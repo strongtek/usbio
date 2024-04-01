@@ -1,0 +1,8 @@
+.DS_Store
+.vscode
+project/linux/usbio
+project/mac/usbio
+project/mingw/usbio.exe
+project/mingw/LibFT4222-64.dll
+*/*/test
+*/*/usbio.tcl
