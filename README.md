@@ -51,6 +51,8 @@ Features of usbio include:
     pacman -S gcc make
     pacman -S tcl-devel
     pacman -S mingw-w64-x86_64-tools
+    pacman -S mingw-w64-x86_64-tcl mingw-w64-x86_64-tcl-nsf mingw-w64-x86_64-tcllib mingw-w64-x86_64-tclvfs-cvs 
+mingw-w64-x86_64-tclx
     ```
 
 1. Download and install FTDI driver from https://ftdichip.com/drivers/d2xx-drivers
@@ -170,7 +172,7 @@ Refer to AN_329 https://ftdichip.com/wp-content/uploads/2024/03/AN_329_User_Guid
 
 * adapter_frequency \<freq>
 
-      <freq> is the frequency in kHz of the SPI master. You can specify any value this parameter, but the tool will round it to the nearest number no larger than you specified.
+      <freq> is the frequency in kHz of the SPI master. You can specify any value to this parameter, but the tool will round it to the nearest number no larger than you specified.
 
 * adapter_get_version
 

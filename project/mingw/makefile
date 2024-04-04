@@ -9,7 +9,7 @@ compile:
 		-I../../source \
 		-I../../imports/windows/ftd2xx \
 		-I../../imports/windows/LibFT4222/inc \
-		-I/usr/include \
+		-I/mingw64/include \
 		-DWINDOWS \
 		-D_WIN32 \
 		-o main.o \
@@ -19,7 +19,7 @@ link:
 	gcc -o usbio.exe main.o \
 		-L../../imports/windows/ftd2xx/dll/amd64 \
 		-L../../imports/windows/LibFT4222/dll/amd64 \
-		-L/usr/lib \
+		-L/mingw64/lib \
 		-lstdc++ \
 		-lftd2xx \
 		-lLibFT4222-64 \
