@@ -164,16 +164,23 @@ proc at24c32_prog {slave address file_name length} {
 
     set fp [open $file_name rb]
 
-    for {set i 0} {$i < $length} {incr i 1} {
+    for {set i 0} {$i < $length} {incr i 32} {
         set tx_data [expr $address+$i]
         set tx_data_hex [format "%04x" $tx_data]
         set tx_data_bin [binary format H* $tx_data_hex]
 
-        append tx_data_bin [read $fp 1]
+        append tx_data_bin [read $fp 32]
 
-        i2c_master_write $slave $tx_data_bin 3
+        i2c_master_write $slave $tx_data_bin 34
 
-        after 5
+        while { 1 } {
+            i2c_master_read $slave 1
+            set i2c_status [i2c_master_get_status]
+            if { $i2c_status eq 32 } {
+                break
+            }
+        }
+        after 1
     }
     close $fp
 
@@ -198,6 +205,7 @@ proc at24c32_read {slave address file_name length} {
     set rx_data_binary [i2c_master_read $slave $length]
     puts -nonewline $fp $rx_data_binary
 
+    flush $fp
     close $fp
 
     set end_time [clock seconds]
