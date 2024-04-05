@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <string>
 #include <vector>
+#include <cstdint>
 #include "cmdline.h"
 #include "ftd2xx.h"
 

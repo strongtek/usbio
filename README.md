@@ -50,7 +50,7 @@ Features of usbio include:
     ```
     pacman -S gcc make
     pacman -S tcl-devel
-    pacman -S mingw-w64-x86_64-tools
+    pacman -S mingw-w64-x86_64-tools mingw-w64-x86_64-toolchain
     pacman -S mingw-w64-x86_64-tcl mingw-w64-x86_64-tcl-nsf mingw-w64-x86_64-tcllib mingw-w64-x86_64-tclvfs-cvs 
 mingw-w64-x86_64-tclx
     ```
@@ -72,7 +72,7 @@ mingw-w64-x86_64-tclx
    Ubuntu/Raspberry Pi OS:
 
     ```
-    sudo apt install tcl-dev
+    sudo apt install tcl-dev tcllib
     ```
 
     There might be some other packages missing on a brand new system, install them if you get errors.
