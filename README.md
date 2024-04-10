@@ -43,6 +43,8 @@ Features of usbio include:
 
 ## Windows
 
+1. Download and install FTDI driver from https://ftdichip.com/drivers/d2xx-drivers
+
 1. Download and install MSYS2 from https://www.msys2.org
 
 1. Install necessary packages.
@@ -51,15 +53,20 @@ Features of usbio include:
     pacman -S gcc make
     pacman -S tcl-devel
     pacman -S mingw-w64-x86_64-tools mingw-w64-x86_64-toolchain
-    pacman -S mingw-w64-x86_64-tcl mingw-w64-x86_64-tcl-nsf mingw-w64-x86_64-tcllib mingw-w64-x86_64-tclvfs-cvs 
-mingw-w64-x86_64-tclx
+    pacman -S mingw-w64-x86_64-tcl mingw-w64-x86_64-tcl-nsf mingw-w64-x86_64-tcllib mingw-w64-x86_64-tclvfs-cvs mingw-w64-x86_64-tclx
     ```
-
-1. Download and install FTDI driver from https://ftdichip.com/drivers/d2xx-drivers
 
 1. Go to project/mingw, and make.
 
 ## Linux(include Raspberry Pi OS)
+
+1. Go to imports/linux/libft4222-linux-1.4.4.188, run:
+   
+    ```
+    sudo ./install4222.sh
+    ```
+
+    This will install the FT4222 library from FTDI.
 
 1. Install necessary packages.
    
@@ -72,18 +79,10 @@ mingw-w64-x86_64-tclx
    Ubuntu/Raspberry Pi OS:
 
     ```
-    sudo apt install tcl-dev tcllib
+    sudo apt install git make gcc tcl-dev tcllib
     ```
 
     There might be some other packages missing on a brand new system, install them if you get errors.
-
-1. Go to imports/linux/libft4222-linux-1.4.4.188, run:
-   
-    ```
-    sudo ./install4222.sh
-    ```
-
-    This will install the FT4222 library from FTDI.
 
 1. Go to project/linux, and make.
 
@@ -107,6 +106,10 @@ mingw-w64-x86_64-tclx
     This will install the FT4222 library from FTDI.
 
 1. Go to project/mac, and make.
+
+You can also goto the Youtube channel to see the build procedure:
+
+https://www.youtube.com/channel/UCNeU4PBaWM9OUf0JDZU0TXA
 
 # Usage
 
