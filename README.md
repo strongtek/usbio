@@ -47,13 +47,10 @@ Features of usbio include:
 
 1. Download and install MSYS2 from https://www.msys2.org
 
-1. Install necessary packages.
+1. Install necessary packages in MINGW64.
 
     ```
-    pacman -S gcc make
-    pacman -S tcl-devel
-    pacman -S mingw-w64-x86_64-tools mingw-w64-x86_64-toolchain
-    pacman -S mingw-w64-x86_64-tcl mingw-w64-x86_64-tcl-nsf mingw-w64-x86_64-tcllib mingw-w64-x86_64-tclvfs-cvs mingw-w64-x86_64-tclx
+    pacman -S git make mingw-w64-x86_64-toolchain mingw-w64-x86_64-tcl mingw-w64-x86_64-tcllib
     ```
 
 1. Go to project/mingw, and make.
