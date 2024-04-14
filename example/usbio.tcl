@@ -218,11 +218,17 @@ puts [adapter_list]
 adapter_open 0
 adapter_get_version
 adapter_frequency 24000
-spi_master_init 1 0 0
-spi_master_set_lines 1
-spi_master_set_mode 0 0
-spi_set_drive_strength 3
-spi_reset_transaction
 
-adapter_uninitialize
+# For SPI
+#spi_master_init 1 0 0
+#spi_master_set_lines 1
+#spi_master_set_mode 0 0
+#spi_set_drive_strength 3
+#spi_reset_transaction
+
+# For I2C
+#i2c_master_init 400
+
+
+#adapter_uninitialize
 adapter_close
