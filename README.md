@@ -70,7 +70,7 @@ Features of usbio include:
    CentOS/RHEL:
 
     ```
-    sudo yum install tcl-devel
+    sudo yum install git make gcc tcl-devel tcllib
     ```
 
    Ubuntu/Raspberry Pi OS:
